@@ -29,7 +29,7 @@ A NextJS website that integrates a lab booking system and calendar with google s
 
 ## Using the program
 
-The program can now be deployed onto any NextJs hosting service like [vercel](https://vercel.com/)
+The program can now be deployed onto any NextJs hosting service like [vercel](https://vercel.com/).
 
 Bookings from the booking form are passed into the google sheet, where a lab can be assigned and the booking can be approved. Approved bookings show up on the home page. Teachers can also check their bookings by entering in their phone number in the "My Bookings" page. Lab techs can be added and their status and location can be updated by using the status page of the google sheet.
 
