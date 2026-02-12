@@ -12,14 +12,12 @@ A NextJS website that integrates a lab booking system and calendar with google s
 <b>Step 2.</b> Go to [Google Cloud Console](https://console.cloud.google.com/) and create a project by navigating to "Select a project" -> "New"
 
 
-<b>Step 3.</b> Select the project and open the side bar to navigate to "Api and Services" -> "Enabled Api and Services"
+<b>Step 3.</b> Select the project and open the side bar to navigate to "Api and Services" -> "Enabled Api and Services" and enable the google sheets api
 
 
-<b>Step 4.</b> Give the service account a name and create it
+<b>Step 4.</b> Go to the Credentials page and click on "Manage service Account" and "Create service account"
 
-
-<b>Step 5.</b> Go to the Credentials page and click on "Manage service Account" and "Create service account"
-
+<b>Step 5.</b> Give the service account a name and create it
 
 <b>Step 6.</b> Still under the Manage Service Account Page, click on keys and generate a new JSON key
 
