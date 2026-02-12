@@ -309,7 +309,7 @@ export default function mybookings() {
                           textTransform: 'uppercase',
                           letterSpacing: '0.5px',
                         }}>
-                          Instructor
+                          Teacher
                         </p>
                         <p style={{
                           color: '#ffffff',
