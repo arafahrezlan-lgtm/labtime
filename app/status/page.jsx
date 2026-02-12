@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import { TiTick } from 'react-icons/ti';
 import { MdChildFriendly, MdLocationPin } from 'react-icons/md';
-import { FaHospital } from 'react-icons/fa';
+import { FaHospital, FaCalendarAlt, FaWrench, FaMicroscope } from 'react-icons/fa';
+import { IoIosWarning } from "react-icons/io";
+import { LuTestTubeDiagonal } from 'react-icons/lu';
 
 export default function Status() {
   const [technicians, setTechnicians] = useState([]);
@@ -131,8 +133,11 @@ export default function Status() {
               fontWeight: '700',
               margin: '0 0 20px 0',
               letterSpacing: '0.5px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
             }}>
-              🔬 Lab Opening Hours
+              <FaMicroscope /> Lab Opening Hours
             </h2>
             <div style={{
               display: 'flex',
@@ -175,8 +180,11 @@ export default function Status() {
               fontWeight: '700',
               margin: '0 0 20px 0',
               letterSpacing: '0.5px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
             }}>
-              🧪 Lab Prep Room Hours
+              <LuTestTubeDiagonal /> Lab Prep Room Hours
             </h2>
             <div style={{
               display: 'flex',
@@ -371,8 +379,11 @@ export default function Status() {
             fontWeight: '700',
             margin: '0 0 20px 0',
             letterSpacing: '0.5px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
           }}>
-            ⚠️ Important Notes
+            <IoIosWarning /> Important Notes
           </h2>
           <div style={{
             display: 'flex',
@@ -388,7 +399,7 @@ export default function Status() {
               borderRadius: '12px',
               border: '1px solid rgba(255, 165, 0, 0.15)',
             }}>
-              <span style={{ fontSize: '1.3rem' }}>📅</span>
+              <span style={{ fontSize: '1.3rem' }}><FaCalendarAlt /></span>
               <span style={{
                 color: '#ffffff',
                 fontSize: '1rem',
@@ -424,7 +435,7 @@ export default function Status() {
               borderRadius: '12px',
               border: '1px solid rgba(255, 165, 0, 0.15)',
             }}>
-              <span style={{ fontSize: '1.3rem' }}>🔧</span>
+              <FaWrench style={{ fontSize: '1.3rem' }} />
               <span style={{
                 color: '#ffffff',
                 fontSize: '1rem',
