@@ -21,7 +21,6 @@ export async function POST(req: Request) {
             date: body.date 
         });
 
-        // Validate form data
         if (!body.lab || !body.date || !body.email || !body.phone) {
             console.error('Missing required form fields');
             return Response.json({ 
@@ -29,7 +28,6 @@ export async function POST(req: Request) {
             }, { status: 400 });
         }
 
-        console.log('🔐 Setting up Google authentication...');
         const auth = new google.auth.GoogleAuth({
             credentials: {
                 client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -45,7 +43,6 @@ export async function POST(req: Request) {
 
         console.log('Appending data to spreadsheet...');
         
-        // First, insert a new row at the top (after header)
         await sheets.spreadsheets.batchUpdate({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
             requestBody: {
@@ -84,7 +81,6 @@ export async function POST(req: Request) {
             }
         });
 
-        console.log('✅ Successfully added booking to Google Sheets');
         return Response.json({ 
             message: 'Booking added successfully', 
             data: response.data 
@@ -94,7 +90,6 @@ export async function POST(req: Request) {
         console.error('Error message:', e.message);
         console.error('Error details:', e);
         
-        // Provide specific error messages
         let errorMsg = e.message || 'Unknown error occurred';
         if (e.message?.includes('401')) {
             errorMsg = 'Authentication failed - check GOOGLE_PRIVATE_KEY and GOOGLE_CLIENT_EMAIL';

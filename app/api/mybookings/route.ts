@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range: 'Bookings!A2:J', // Include all columns including approved
+            range: 'Bookings!A2:J',
         });
 
         const rows = response.data.values || [];
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
             
             if (!lab || !date) return; // Skip incomplete rows
             
-            // Match phone number (trim whitespace)
+            // Match phone number
             if (userPhone && userPhone.toString().trim() === phone.toString().trim()) {
                 userBookings.push({
                     lab,

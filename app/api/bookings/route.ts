@@ -16,12 +16,12 @@ export async function GET() {
 
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range: 'Bookings!A2:J', // Include column J for approved status
+            range: 'Bookings!A2:J',
         });
 
         const rows = response.data.values || [];
         
-        // Transform the data into the calendar format
+        // Transform the data into calendar format
         const bookingsData: any = {};
 
         rows.forEach((row: any[]) => {
@@ -29,7 +29,6 @@ export async function GET() {
             
             if (!lab || !date) return; // Skip incomplete rows
             
-            // Only include if approved is explicitly true=
             if (!approved || (approved.toString().toLowerCase() !== 'true' && approved !== true)) {
                 return;
             }
