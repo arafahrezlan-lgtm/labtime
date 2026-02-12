@@ -727,7 +727,7 @@ export default function Home() {
                       fontSize: '0.85rem',
                       marginBottom: '4px',
                     }}>
-                      Time & Duration
+                      Time
                     </div>
                     <div style={{
                       fontSize: '1.1rem',
