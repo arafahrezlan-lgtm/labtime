@@ -89,7 +89,7 @@ export default function Home() {
         if (response.ok) {
           const data = await response.json();
           setBookings(data);
-          console.log('✅ Bookings loaded from Google Sheets');
+          console.log('Bookings loaded from Google Sheets');
         } else {
           console.error('Failed to fetch bookings');
         }
