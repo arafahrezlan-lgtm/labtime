@@ -44,7 +44,7 @@ export async function POST(req: Request) {
         rows.forEach((row: any[]) => {
             const [date, startTime, endTime, title, teacher, userPhone, numStudents, level, classVal, subject, notes, lab, approved] = row;
             
-            if (!lab || !date) return; // Skip incomplete rows
+            if (!date) return; // Skip incomplete rows
             
             // Match phone number
             if (userPhone && userPhone.toString().trim() === phone.toString().trim()) {

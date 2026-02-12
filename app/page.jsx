@@ -78,9 +78,9 @@ export default function Home() {
     { name: 'Biology Lab 2', color: '#B8F4E8', category: 'Biology' },
   ];
 
-  // 30-minute intervals from 8 AM to 7 PM (24 slots)
-  const hours = Array.from({ length: 24 }, (_, i) => {
-    const hour = Math.floor(i / 2) + 8;
+  // 30-minute intervals from 7 AM to 5 PM (20 slots)
+  const hours = Array.from({ length: 20 }, (_, i) => {
+    const hour = Math.floor(i / 2) + 7;
     const minutes = (i % 2) * 30;
     return hour + minutes / 60;
   });

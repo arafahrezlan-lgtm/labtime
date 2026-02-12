@@ -31,14 +31,16 @@ export default function book() {
     { name: 'Biology Lab 2', color: '#B8F4E8', category: 'Biology' },
   ];
 
-  const timeSlots = Array.from({ length: 24 }, (_, i) => {
-    const hour = Math.floor(i / 2) + 8;
+  const timeSlots = Array.from({ length: 20 }, (_, i) => {
+    const hour = Math.floor(i / 2) + 7;
     const minutes = (i % 2) * 30;
     return {
       value: hour + minutes / 60,
       label: `${hour}:${minutes === 0 ? '00' : '30'}`,
     };
   });
+
+  const endTimeSlots = [...timeSlots, { value: 17, label: '17:00' }];
 
   const handleInputChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
@@ -423,7 +425,7 @@ export default function book() {
                 }}
               >
                 <option value="">Select time</option>
-                {timeSlots.map((slot) => (
+                {endTimeSlots.map((slot) => (
                   <option key={slot.value} value={slot.value} style={{ background: '#1a1a2e' }}>
                     {slot.label}
                   </option>

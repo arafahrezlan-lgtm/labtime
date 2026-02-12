@@ -227,7 +227,7 @@ export default function mybookings() {
                           fontSize: '0.9rem',
                           margin: 0,
                         }}>
-                          {booking.lab}
+                          {booking.lab || 'Pending'}
                         </p>
                       </div>
                       <div style={{
@@ -338,7 +338,7 @@ export default function mybookings() {
                           margin: 0,
                           fontWeight: '600',
                         }}>
-                          {booking.lab || '—'}
+                          {booking.lab || 'Pending'}
                         </p>
                       </div>
 
