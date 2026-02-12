@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { CiAlarmOn } from 'react-icons/ci';
-import { FaChalkboardTeacher, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaRegCalendarAlt, FaRegClock } from 'react-icons/fa';
 
 export default function Home() {
   const [selectedLab, setSelectedLab] = useState('Physics Lab 1');
@@ -735,7 +734,7 @@ export default function Home() {
                     border: `2px solid ${selectedLabData.color}66`,
                     color: selectedLabData.color,
                   }}>
-                    <CiAlarmOn size={28} />
+                    <FaRegClock size={28} />
                   </div>
                   <div>
                     <div style={{
