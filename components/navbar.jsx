@@ -25,10 +25,10 @@ export default  function Navbar() {
               Home
             </Link>
             <Link href="/book" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Book
+              Book Lab
             </Link>
-            <Link href="/status" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-              Status
+            <Link href="/calendar" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Calendar
             </Link>
             <Link href="/mybookings" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
               My Bookings
@@ -71,13 +71,13 @@ export default  function Navbar() {
               href="/book"
               className="text-white hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Book
+              Book Lab
             </Link>
             <Link
-              href="/status"
+              href="/calendar"
               className="text-white hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Status
+              Calendar
             </Link>
             <Link
               href="/mybookings"
