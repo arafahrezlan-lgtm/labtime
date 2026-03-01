@@ -16,7 +16,7 @@ export default  function Navbar() {
   };
 
   return (
-    <nav className="linear-gradient(90deg, #1a1a2e 0%, #16213e 100%) shadow-lg">
+    <nav className="bg-gradient-to-r from-[#1a1a2e] to-[#16213e] shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ export default  function Navbar() {
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-blue-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
