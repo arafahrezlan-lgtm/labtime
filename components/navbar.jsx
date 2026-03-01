@@ -33,6 +33,9 @@ export default  function Navbar() {
             <Link href="/mybookings" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
               My Bookings
             </Link>
+            <Link href="/admin" className="text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+              Lab Admin
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -84,6 +87,12 @@ export default  function Navbar() {
               className="text-white hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium"
             >
               My Bookings
+            </Link>
+            <Link
+              href="/admin"
+              className="text-white hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Lab Admin
             </Link>
           </div>
         </div>
