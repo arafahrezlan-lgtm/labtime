@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { TiTick } from 'react-icons/ti';
 import { MdChildFriendly, MdLocationPin } from 'react-icons/md';
 import { FaHospital, FaCalendarAlt, FaWrench, FaMicroscope, FaBook } from 'react-icons/fa';
+import { FaRegCalendarXmark } from 'react-icons/fa6';
 import { IoIosWarning } from "react-icons/io";
 import { LuTestTubeDiagonal } from 'react-icons/lu';
 
@@ -42,6 +43,8 @@ export default function Home() {
         return '#FFA500';
       case 'on course':
         return '#9B59B6';
+      case 'on leave':
+        return '#E67E22';
       default:
         return '#888888';
     }
@@ -57,6 +60,8 @@ export default function Home() {
         return 'Childcare Leave';
       case 'on course':
         return 'On Course';
+      case 'on leave':
+        return 'On Leave';
       default:
         return status || 'Unknown';
     }
@@ -72,6 +77,8 @@ export default function Home() {
         return <MdChildFriendly size={28} />;
       case 'on course':
         return <FaBook size={24} />;
+      case 'on leave':
+        return <FaRegCalendarXmark size={24} />;
       default:
         return '❓';
     }
