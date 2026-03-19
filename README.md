@@ -23,7 +23,7 @@ A NextJS website that integrates a lab booking system and calendar with google s
 
 <b>Step 7.</b> Create a Google Sheet following [this](https://docs.google.com/spreadsheets/d/1RRft-mU8D1KhQnZm6x2MxUNY82KwpY8drye_R06ZJ38/edit?usp=sharing) template and share it with your service account, giving it editing rights
 
-<b>Step 7.</b> Add the key, google sheet id and service account email into a .env.local file under the names: GOOGLE_CLIENT_EMAIL, GOOGLE_PRIVATE_KEY and GOOGLE_SHEET_ID
+<b>Step 8.</b> Add the key, google sheet id and service account email into a .env.local file under the names: GOOGLE_CLIENT_EMAIL, GOOGLE_PRIVATE_KEY and GOOGLE_SHEET_ID
 
 ## Using the program
 
