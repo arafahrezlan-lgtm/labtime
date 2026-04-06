@@ -162,7 +162,7 @@ export default function Calendar() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+      background: 'linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%)',
       fontFamily: '"Poppins", sans-serif',
       padding: '40px 20px',
     }}>
@@ -180,7 +180,7 @@ export default function Calendar() {
           <h1 style={{
             fontFamily: '"Playfair Display", serif',
             fontSize: '3.5rem',
-            background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+            background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -191,7 +191,7 @@ export default function Calendar() {
             SCSS Science Lab Booking
           </h1>
           <p style={{
-            color: '#a0a0c0',
+            color: '#64748b',
             fontSize: '1.1rem',
             fontWeight: '300',
           }}>
@@ -212,10 +212,10 @@ export default function Calendar() {
             onClick={goToPreviousWeek}
             style={{
               padding: '12px 24px',
-              background: 'rgba(255, 255, 255, 0.1)',
-              border: '2px solid rgba(255, 215, 0, 0.3)',
+              background: 'rgba(255, 255, 255, 0.7)',
+              border: '2px solid rgba(30, 64, 175, 0.3)',
               borderRadius: '12px',
-              color: '#FFD700',
+              color: '#1e40af',
               cursor: 'pointer',
               fontSize: '1rem',
               fontWeight: '600',
@@ -226,11 +226,11 @@ export default function Calendar() {
               gap: '8px',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 215, 0, 0.2)';
+              e.currentTarget.style.background = 'rgba(30, 64, 175, 0.1)';
               e.currentTarget.style.transform = 'translateX(-3px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.7)';
               e.currentTarget.style.transform = 'translateX(0)';
             }}
           >
@@ -240,10 +240,10 @@ export default function Calendar() {
 
           <div style={{
             padding: '12px 30px',
-            background: 'rgba(255, 215, 0, 0.15)',
-            border: '2px solid rgba(255, 215, 0, 0.4)',
+            background: 'rgba(30, 64, 175, 0.1)',
+            border: '2px solid rgba(30, 64, 175, 0.3)',
             borderRadius: '12px',
-            color: '#FFD700',
+            color: '#1e40af',
             fontSize: '1.1rem',
             fontWeight: '700',
             backdropFilter: 'blur(10px)',
@@ -257,10 +257,10 @@ export default function Calendar() {
               onClick={goToCurrentWeek}
               style={{
                 padding: '12px 24px',
-                background: 'rgba(255, 215, 0, 0.2)',
-                border: '2px solid rgba(255, 215, 0, 0.5)',
+                background: 'rgba(30, 64, 175, 0.1)',
+                border: '2px solid rgba(30, 64, 175, 0.4)',
                 borderRadius: '12px',
-                color: '#FFD700',
+                color: '#1e40af',
                 cursor: 'pointer',
                 fontSize: '0.95rem',
                 fontWeight: '600',
@@ -268,11 +268,11 @@ export default function Calendar() {
                 backdropFilter: 'blur(10px)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 215, 0, 0.3)';
+                e.currentTarget.style.background = 'rgba(30, 64, 175, 0.2)';
                 e.currentTarget.style.transform = 'scale(1.05)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 215, 0, 0.2)';
+                e.currentTarget.style.background = 'rgba(30, 64, 175, 0.1)';
                 e.currentTarget.style.transform = 'scale(1)';
               }}
             >
@@ -284,10 +284,10 @@ export default function Calendar() {
             onClick={goToNextWeek}
             style={{
               padding: '12px 24px',
-              background: 'rgba(255, 255, 255, 0.1)',
-              border: '2px solid rgba(255, 215, 0, 0.3)',
+              background: 'rgba(255, 255, 255, 0.7)',
+              border: '2px solid rgba(30, 64, 175, 0.3)',
               borderRadius: '12px',
-              color: '#FFD700',
+              color: '#1e40af',
               cursor: 'pointer',
               fontSize: '1rem',
               fontWeight: '600',
@@ -298,11 +298,11 @@ export default function Calendar() {
               gap: '8px',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 215, 0, 0.2)';
+              e.currentTarget.style.background = 'rgba(30, 64, 175, 0.1)';
               e.currentTarget.style.transform = 'translateX(3px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.7)';
               e.currentTarget.style.transform = 'translateX(0)';
             }}
           >
@@ -313,12 +313,12 @@ export default function Calendar() {
 
         {/* Calendar Grid - Labs as Rows, Days as Columns */}
         <div style={{
-          background: 'rgba(255, 255, 255, 0.03)',
+          background: 'rgba(255, 255, 255, 0.8)',
           borderRadius: '25px',
           padding: '25px',
           backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4)',
+          border: '1px solid rgba(0, 0, 0, 0.08)',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.08)',
           overflowX: 'auto',
         }}>
           <div style={{
@@ -331,7 +331,7 @@ export default function Calendar() {
             <div style={{
               padding: '12px',
               fontWeight: '700',
-              color: '#FFD700',
+              color: '#1e40af',
               fontSize: '0.9rem',
               display: 'flex',
               alignItems: 'center',
@@ -346,8 +346,8 @@ export default function Calendar() {
                   padding: '12px 8px',
                   textAlign: 'center',
                   fontWeight: '700',
-                  color: '#FFD700',
-                  background: 'rgba(255, 215, 0, 0.1)',
+                  color: '#1e40af',
+                  background: 'rgba(30, 64, 175, 0.08)',
                   borderRadius: '10px',
                   fontSize: '0.95rem',
                   letterSpacing: '0.5px',
@@ -360,7 +360,7 @@ export default function Calendar() {
                 <div style={{
                   fontSize: '0.8rem',
                   fontWeight: '500',
-                  color: '#FFA500',
+                  color: '#3b82f6',
                 }}>
                   {formatDate(date)}
                 </div>
@@ -512,8 +512,8 @@ export default function Calendar() {
                     style={{
                       padding: '8px',
                       borderRadius: '10px',
-                      background: 'rgba(255, 255, 255, 0.02)',
-                      border: '1px solid rgba(255, 255, 255, 0.05)',
+                      background: 'rgba(0, 0, 0, 0.02)',
+                      border: '1px solid rgba(0, 0, 0, 0.06)',
                       minHeight: '80px',
                       display: 'flex',
                       flexDirection: 'column',
@@ -529,15 +529,15 @@ export default function Calendar() {
                             onClick={() => openBookingModal({ ...booking, labName: btcRow.label }, date)}
                             style={{
                               padding: '8px 10px',
-                              background: `linear-gradient(135deg, ${levelColor}22 0%, ${levelColor}11 100%)`,
+                              background: `linear-gradient(135deg, ${levelColor}18 0%, ${levelColor}0d 100%)`,
                               borderRadius: '8px',
-                              border: `1px solid ${levelColor}44`,
+                              border: `1px solid ${levelColor}33`,
                               cursor: 'pointer',
                               transition: 'all 0.2s ease',
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.transform = 'translateY(-1px)';
-                              e.currentTarget.style.boxShadow = `0 4px 12px ${levelColor}44`;
+                              e.currentTarget.style.boxShadow = `0 4px 12px ${levelColor}33`;
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.transform = 'translateY(0)';
@@ -553,7 +553,7 @@ export default function Calendar() {
                               {formatTime(booking.startTime)} – {formatTime(booking.endTime)}
                             </div>
                             <div style={{
-                              color: '#ffffff',
+                              color: '#1e293b',
                               fontWeight: '600',
                               fontSize: '0.75rem',
                               lineHeight: '1.2',
@@ -561,7 +561,7 @@ export default function Calendar() {
                               {booking.title}
                             </div>
                             <div style={{
-                              color: 'rgba(255, 255, 255, 0.6)',
+                              color: 'rgba(0, 0, 0, 0.5)',
                               fontSize: '0.65rem',
                             }}>
                               {booking.instructor}
@@ -590,7 +590,7 @@ export default function Calendar() {
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
-              color: '#a0a0c0',
+              color: '#475569',
               fontSize: '0.9rem',
             }}>
               <div style={{
@@ -619,7 +619,7 @@ export default function Calendar() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'rgba(0, 0, 0, 0.8)',
+              background: 'rgba(0, 0, 0, 0.4)',
               backdropFilter: 'blur(5px)',
               display: 'flex',
               alignItems: 'center',
@@ -650,13 +650,13 @@ export default function Calendar() {
             <div
               onClick={(e) => e.stopPropagation()}
               style={{
-                background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+                background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
                 borderRadius: '25px',
                 padding: '40px',
                 maxWidth: '600px',
                 width: '100%',
                 border: `2px solid ${modalLabColor}`,
-                boxShadow: `0 20px 60px ${modalLabColor}44`,
+                boxShadow: `0 20px 60px rgba(0, 0, 0, 0.15)`,
                 animation: 'slideUp 0.3s ease',
                 position: 'relative',
               }}
@@ -668,7 +668,7 @@ export default function Calendar() {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  background: 'rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(0, 0, 0, 0.05)',
                   border: 'none',
                   borderRadius: '50%',
                   width: '40px',
@@ -677,16 +677,16 @@ export default function Calendar() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   cursor: 'pointer',
-                  color: '#ffffff',
+                  color: '#1e293b',
                   fontSize: '1.5rem',
                   transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.1)';
                   e.currentTarget.style.transform = 'rotate(90deg)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.05)';
                   e.currentTarget.style.transform = 'rotate(0deg)';
                 }}
               >
@@ -694,7 +694,7 @@ export default function Calendar() {
               </button>
 
               {/* Modal Content */}
-              <div style={{ color: '#ffffff' }}>
+              <div style={{ color: '#1e293b' }}>
                 <div style={{
                   display: 'inline-block',
                   padding: '8px 16px',
@@ -713,7 +713,7 @@ export default function Calendar() {
                   fontFamily: '"Playfair Display", serif',
                   fontSize: '2.5rem',
                   marginBottom: '10px',
-                  color: '#FFD700',
+                  color: '#1e40af',
                   fontWeight: '700',
                 }}>
                   {selectedBooking.title}
@@ -740,7 +740,7 @@ export default function Calendar() {
                       <FaChalkboardTeacher size={24} />
                     </div>
                     <div>
-                      <div style={{ color: '#a0a0c0', fontSize: '0.85rem', marginBottom: '4px' }}>Teacher</div>
+                      <div style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '4px' }}>Teacher</div>
                       <div style={{ fontSize: '1.1rem', fontWeight: '600' }}>{selectedBooking.instructor}</div>
                     </div>
                   </div>
@@ -755,7 +755,7 @@ export default function Calendar() {
                       <FaRegCalendarAlt size={24} />
                     </div>
                     <div>
-                      <div style={{ color: '#a0a0c0', fontSize: '0.85rem', marginBottom: '4px' }}>Date & Day</div>
+                      <div style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '4px' }}>Date & Day</div>
                       <div style={{ fontSize: '1.1rem', fontWeight: '600' }}>
                         {getDayName(selectedBooking.date)}, {formatDate(selectedBooking.date)}
                       </div>
@@ -772,7 +772,7 @@ export default function Calendar() {
                       <FaRegClock size={28} />
                     </div>
                     <div>
-                      <div style={{ color: '#a0a0c0', fontSize: '0.85rem', marginBottom: '4px' }}>Time</div>
+                      <div style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '4px' }}>Time</div>
                       <div style={{ fontSize: '1.1rem', fontWeight: '600' }}>
                         {formatTime(selectedBooking.startTime)} - {formatTime(selectedBooking.endTime)}
                       </div>
@@ -789,7 +789,7 @@ export default function Calendar() {
                       <IoMdPeople size={28} />
                     </div>
                     <div>
-                      <div style={{ color: '#a0a0c0', fontSize: '0.85rem', marginBottom: '4px' }}>Number of Students</div>
+                      <div style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '4px' }}>Number of Students</div>
                       <div style={{ fontSize: '1.1rem', fontWeight: '600' }}>{selectedBooking.numStudents || '—'}</div>
                     </div>
                   </div>
@@ -804,7 +804,7 @@ export default function Calendar() {
                       <MdOutlineClass size={28} />
                     </div>
                     <div>
-                      <div style={{ color: '#a0a0c0', fontSize: '0.85rem', marginBottom: '4px' }}>Class</div>
+                      <div style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '4px' }}>Class</div>
                       <div style={{ fontSize: '1.1rem', fontWeight: '600' }}>{selectedBooking.class || '—'}</div>
                     </div>
                   </div>
