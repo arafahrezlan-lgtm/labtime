@@ -326,7 +326,7 @@ export default function Calendar() {
 
         {/* Calendar Grid - Labs as Rows, Days as Columns */}
         <div style={{
-          background: 'rgba(255, 255, 255, 0.03)',
+          background: 'rgba(255, 255, 255, 0.8)',
           borderRadius: '25px',
           padding: '25px',
           backdropFilter: 'blur(20px)',
@@ -422,16 +422,8 @@ export default function Calendar() {
                       style={{
                         padding: '8px',
                         borderRadius: '10px',
-                        background: 'rgba(255, 255, 255, 0.02)',
-                        border: '1px solid rgba(255, 255, 255, 0.05)',
-                        minHeight: '80px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '6px',
-                      }}
-                    >
-                      {dayBookings.length > 0 ? (
-                        dayBookings.map((booking, bIndex) => {
+                        background: 'rgba(248, 249, 255, 0.8)',
+                        border: '1px solid rgba(59, 91, 219, 0.08)',
                           const levelColor = getLevelColor(booking);
                           const levelEmoji = getLevelEmoji(booking);
                           return (
@@ -468,7 +460,7 @@ export default function Calendar() {
                                 {formatTime(booking.startTime)} – {formatTime(booking.endTime)}
                               </div>
                               <div style={{
-                                color: '#ffffff',
+                                color: '#1e293b',
                                 fontWeight: '600',
                                 fontSize: '0.75rem',
                                 lineHeight: '1.2',
@@ -476,7 +468,7 @@ export default function Calendar() {
                                 {booking.title}
                               </div>
                               <div style={{
-                                color: 'rgba(255, 255, 255, 0.6)',
+                                color: 'rgba(30, 41, 59, 0.6)',
                                 fontSize: '0.65rem',
                               }}>
                                 {booking.instructor}
@@ -548,15 +540,15 @@ export default function Calendar() {
                             onClick={() => openBookingModal({ ...booking, labName: btcRow.label }, date)}
                             style={{
                               padding: '8px 10px',
-                              background: `linear-gradient(135deg, ${levelColor}22 0%, ${levelColor}11 100%)`,
+                              background: `linear-gradient(135deg, ${levelColor}18 0%, ${levelColor}0d 100%)`,
                               borderRadius: '8px',
-                              border: `1px solid ${levelColor}44`,
+                              border: `1px solid ${levelColor}33`,
                               cursor: 'pointer',
                               transition: 'all 0.2s ease',
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.transform = 'translateY(-1px)';
-                              e.currentTarget.style.boxShadow = `0 4px 12px ${levelColor}44`;
+                              e.currentTarget.style.boxShadow = `0 4px 12px ${levelColor}33`;
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.transform = 'translateY(0)';
@@ -576,7 +568,7 @@ export default function Calendar() {
                               {formatTime(booking.startTime)} – {formatTime(booking.endTime)}
                             </div>
                             <div style={{
-                              color: '#ffffff',
+                              color: '#1e293b',
                               fontWeight: '600',
                               fontSize: '0.75rem',
                               lineHeight: '1.2',
@@ -643,7 +635,7 @@ export default function Calendar() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'rgba(0, 0, 0, 0.8)',
+              background: 'rgba(0, 0, 0, 0.4)',
               backdropFilter: 'blur(5px)',
               display: 'flex',
               alignItems: 'center',
@@ -680,7 +672,7 @@ export default function Calendar() {
                 maxWidth: '600px',
                 width: '100%',
                 border: `2px solid ${modalLabColor}`,
-                boxShadow: `0 20px 60px ${modalLabColor}44`,
+                boxShadow: `0 20px 60px rgba(0, 0, 0, 0.15)`,
                 animation: 'slideUp 0.3s ease',
                 position: 'relative',
               }}
@@ -718,7 +710,7 @@ export default function Calendar() {
               </button>
 
               {/* Modal Content */}
-              <div style={{ color: '#ffffff' }}>
+              <div style={{ color: '#1e293b' }}>
                 <div style={{
                   display: 'inline-block',
                   padding: '8px 16px',
